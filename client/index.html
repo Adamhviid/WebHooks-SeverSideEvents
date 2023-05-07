@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Webhook example</title>
+  </head>
+  <body>
+    <h1>Webhook example</h1>
+    
+    <button id="subBtn">subscribe</button>
+    <button id="unsubBtn" style="background-color: red">unsubscribe</button>
+
+    <h2>Stocks</h2>
+    <table id="table">
+      <thead>
+        <tr>
+          <th>Ticker</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+
+      <script src="serverSideEvent.js"></script>
+      <script src="webhook.js"></script>
+  </body>
+</html>
