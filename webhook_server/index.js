@@ -7,6 +7,8 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
+app.listen(8000, () => console.log('Node.js server started on port 8000.'));
+
 app.post('/subscribe', (req, res) => {
   subscribe(req.body.username, req.body.url)
   res.sendStatus(200);
@@ -17,11 +19,9 @@ app.post('/unsubscribe', (req, res) => {
   res.sendStatus(200);
 });
 
-//interval to send messages to webhooks
 setInterval(async () => {
   const users = await getSubscribers()
   if (users.length === 0) return;
-  /* console.log(`${users.length} subscribers found`); */
 
   users.forEach(async (user) => {
     try {
@@ -45,6 +45,3 @@ function generateStocks() {
   });
   return stocks;
 }
-
-
-app.listen(8000, () => console.log('Node.js server started on port 8000.'));
