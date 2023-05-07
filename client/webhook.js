@@ -26,13 +26,6 @@ unsubBtn.addEventListener("click", () => {
     },
   }).then(() => {
     const table = document.getElementById("table");
-    table.innerHTML = `
-            <thead>
-              <tr>
-                <th>Ticker</th>
-                <th>Price</th>
-              </tr>
-            </thead>
-          `;
+    table.innerHTML = "";
   });
 });

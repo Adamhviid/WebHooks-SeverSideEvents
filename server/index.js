@@ -7,14 +7,21 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(express.static('public'));
 
+
+app.listen(5500, () => {
+  console.log(`Server listening on port 5500`);
+});
+
 const messages = [];
 
+//webook
 app.post("/subscribe", (req, res) => {
   messages.push(req.body);
   res.send("Subscribed");
 
 });
 
+//sse
 app.get("/messages", (req, res) => {
   res.writeHead(200, {
     "Content-Type": "text/event-stream",
@@ -34,11 +41,3 @@ function sendTime(res) {
   res.write(`data: ${(new Date()).toLocaleTimeString()}\n\n`);
 }
 
-/* app.get("/", (req, res) => {
-  res.send("Hello World!");
-}); */
-
-// start server
-app.listen(5500, () => {
-  console.log(`Server listening on port 5500`);
-});
