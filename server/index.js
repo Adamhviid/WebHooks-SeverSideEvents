@@ -18,7 +18,6 @@ const messages = [];
 app.post("/subscribe", (req, res) => {
   messages.push(req.body);
   res.send("Subscribed");
-
 });
 
 //sse
@@ -32,12 +31,6 @@ app.get("/messages", (req, res) => {
 });
 
 function getMessages(res) {
-  const time = new Date().toLocaleTimeString()
   res.write(`data: ${(JSON.stringify(messages))}\n\n`);
   messages.pop();
 }
-
-function sendTime(res) {
-  res.write(`data: ${(new Date()).toLocaleTimeString()}\n\n`);
-}
-
