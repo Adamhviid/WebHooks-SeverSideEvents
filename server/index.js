@@ -27,7 +27,7 @@ app.get("/messages", (req, res) => {
     "Connection": "keep-alive",
     "Cache-Control": "no-cache",
   });
-  setInterval(() => getMessages(res), 100);
+  setInterval(() => getMessages(res), 750);
 });
 
 function getMessages(res) {

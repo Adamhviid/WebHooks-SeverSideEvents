@@ -36,7 +36,7 @@ setInterval(async () => {
       console.error(err.message);
     }
   });
-}, 3500);
+}, 1500);
 
 function generateStocks() {
   const stocks = [{ ticker: "AAPL", price: 0 }, { ticker: "AMZN", price: 0 }, { ticker: "GOOG", price: 0 }, { ticker: "FB", price: 0 }, { ticker: "TSLA", price: 0 }]

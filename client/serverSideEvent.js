@@ -6,6 +6,7 @@ eventSource.onopen = (event) => {
 
 eventSource.onmessage = (event) => {
   const data = JSON.parse(event.data);
+  console.log(data);
   const table = document.getElementById("table");
 
   for (let i = 0; i < data.length; i++) {
