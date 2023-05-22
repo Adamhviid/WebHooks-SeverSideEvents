@@ -1,15 +1,15 @@
 1)
-cd ./webhook_server:
-node createDatabase.js
-npm i
+cd ./webhook_server: <br/>
+node createDatabase.js <br/>
+npm i <br/>
 npm start
 
 2)
-cd ./server:
-npm i
+cd ./server: <br/>
+npm i <br/>
 npm start
 
 3)
-start live server extension, som åbner i  5501.
-tyk på client mappen
+start live server extension, som åbner i  5501. <br/>
+tyk på client mappen <br/>
 tryk på subscribe og se magik
